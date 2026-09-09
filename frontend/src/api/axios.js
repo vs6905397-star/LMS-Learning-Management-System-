@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL: "http://localhost:5000/api",
+    baseURL: "https://lms-learning-management-system-k7zc.onrender.com/",
     withCredentials: true,
 });
 
