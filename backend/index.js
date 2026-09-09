@@ -20,7 +20,7 @@ const app = express();
 
 app.use(
     cors({
-    origin: "https://lms-learning-management-system-2.onrender.com/login",
+    origin: "https://lms-learning-management-system-2.onrender.com",
     credentials: true
 }));
 
