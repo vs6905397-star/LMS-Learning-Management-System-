@@ -331,7 +331,7 @@ The course filtering experience adapts to smaller screens with a mobile-friendly
 
 1. Clone the repository
 
-git clone <YOUR_REPOSITORY_URL>
+git clone (https://github.com/vs6905397-star/LMS-Learning-Management-System-)
 
 2. Go to the project directory
 
@@ -346,22 +346,6 @@ npm install
 
 cd ../backend
 npm install
-
----
-
-🔐 Environment Variables
-
-Create a ".env" file inside the backend directory.
-
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-
-Create the frontend environment file if required:
-
-VITE_API_URL=http://localhost:5000/api
-
-«Never commit ".env" files or secret keys to GitHub.»
 
 ---
 
@@ -485,6 +469,10 @@ While building StudyHub, I worked with:
 - Git/GitHub workflow
 
 ---
+
+Live link 
+frontend : https://lms-learning-management-system-2.onrender.com
+backend : https://lms-learning-management-system-k7zc.onrender.com
 
 👨‍💻 Developer
 
