@@ -12,7 +12,7 @@ const ResetPassword = () => {
    const email = location.state?.email;
    const resetToken = location.state?.resetToken;
   const mode = location.state?.mode || "forgot-password";
-console.log(resetToken, email)
+
   const[newPassword, setNewPassword] = useState("");
   const[loading, setLoading] = useState(false)
 
