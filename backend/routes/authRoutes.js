@@ -1,5 +1,5 @@
 import express from "express"
-import { getCompletedCourse, getProfile, login, logout, signUp, updateProfile } from "../controllers/authControllers.js"
+import { forgotPassword, getCompletedCourse, getProfile, login, logout, resendOTP, resetPassword, signUp, updateProfile, verifyOTP, verifyResetOtp } from "../controllers/authControllers.js"
 import upload from "../middleware/upload.js"
 import authMiddleware from "../middleware/authMiddleware.js"
 
@@ -7,9 +7,19 @@ const router = express.Router();
 
 router.post("/signup", upload.single("dp"), signUp);
 
+router.post("/verify-otp", verifyOTP)
+
+router.post("/resend-otp", resendOTP)
+
 router.post("/login", login);
 
 router.post("/logout", authMiddleware, logout);
+
+router.post("/forgot-password", forgotPassword);
+
+router.post("/verify-reset-otp", verifyResetOtp);
+
+router.post("/reset-password", resetPassword);
 
 router.get("/profile", authMiddleware, getProfile);
 

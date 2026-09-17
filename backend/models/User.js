@@ -38,7 +38,19 @@ const userSchema = new mongoose.Schema({
     completedCourses:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Course",
-    }]
+    }],
+    isVerified:{
+        type: Boolean,
+        default: false,
+    },
+    otp:{
+        type: String,
+        default: null,
+    },
+    otpExpires:{
+        type: Date,
+        default: null,
+    }
 
 
 },{timestamps: true});

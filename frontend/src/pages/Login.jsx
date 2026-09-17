@@ -62,7 +62,7 @@ const Login = () => {
   return (
     <section className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-blue-50 min-h-screen w-ful overflow-x-hidden'>
       <div className='flex flex-col m-5 p-3 justify-between min-h-screen w-full'>
-        <div className='justify-between'>
+        <div cla ssName='justify-between'>
           <h1 className='text-black font-bold text-2xl flex'><GraduationCap size={40} className='text-blue-700'/>Study <span className='text-blue-700 '>Hub</span></h1>
         </div>
          <div className='justify-center items-center'>
@@ -87,6 +87,9 @@ const Login = () => {
             <p className='text-red-600 text-sm mt-1 px-2'>{errors.password}</p>
           )}
           </div>
+          <Link to='/verifyotp' state={{mode:"forgot-password"}}>
+          <h1 className='text-blue-700 font-medium text-sm justify-self-end-safe'>forgot password?</h1>
+          </Link>
           <div className='items-center flex flex-col gap-4'>
           <button disabled={loading} onClick={handleLogin} className='flex text-white bg-[#2563EB] rounded-lg items-center mt-5 px-5 py-1.5 max-w-fit hover:bg-blue-400 hover:scale-105 hover:shadow-xl transition-all duration-150 shadow-xl'>{loading ? "Logging in..." : "Login"}<ArrowRight size={20}/></button>
           <span className='text-gray-500 font-semibold'>Don't have an account? <Link to="/signup" className='text-blue-700 '>  Sign up</Link></span>

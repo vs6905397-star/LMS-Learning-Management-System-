@@ -13,7 +13,7 @@ function CoursesBox({courses,id, type , enrolled = false}) {
     <section key={courses?._id} className='grid  min-w-60 bg-whitesmoke rounded-xl shadow-2xl border border-gray-200 items-center p-2   hover:scale-105 hover:shadow-xl transition-all duration-150'>
       <Link to={enrolled ? `/mylearning/${id}` : `/courses/${courses._id}`}>
         <div className='items-center justify-items-center  ' >
-            <img src={courses?.thumbnail} alt="" className='rounded-xl shadow-xl'/>
+            <img src={courses?.thumbnail} loading="lazy" alt="" className='rounded-xl shadow-xl'/>
         </div>
        
         <div className='flex flex-col p-2 space-y-3 '>

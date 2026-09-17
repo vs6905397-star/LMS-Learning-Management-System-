@@ -61,7 +61,7 @@ function CourseInfo({course, loading, error}) {
 <>
     <section className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full rounded-2xl bg-zinc-100 shadow-2xl  p-4 md:p-6'>
         <div className='flex rounded-xl overflow-hidden w-full h-48 md:h-auto'>
-            <img src={course?.thumbnail} alt="" className='w-full h-full object-cover'/>
+            <img src={course?.thumbnail} alt={course?.title} loading="lazy" className='w-full h-full object-cover'/>
         </div>
 
         <div className='flex flex-col mx-3 gap-4'>
@@ -69,7 +69,7 @@ function CourseInfo({course, loading, error}) {
            <p className='text-base md:text-lg font-semibold text-gray-500 my-2'>{course?.description}</p>
 
            <span className='flex flex-wrap gap-3 items-center'>
-            <img src={course?.instructor?.name} alt="" className='w-10 h-10 md:w-12 md:h-12 rounded-full object-cover overflow-hidden' />
+            <img src={course?.instructor?.name} loading="lazy" alt={""} className='w-10 h-10 md:w-12 md:h-12 rounded-full object-cover overflow-hidden' />
             <h1 className='text-sm md:text-base font-semibold'>{course?.instructor?.name}</h1>
            </span>
 

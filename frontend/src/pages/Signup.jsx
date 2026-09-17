@@ -37,7 +37,9 @@ const Signup = () => {
       
       const res = await signUp(formData);
       toast.success(res?.data.message);
-      navigate("/login");
+      navigate("/verifyotp", {
+        state: {email}
+      });
       
     } catch (error) {
       console.log( error.message)
@@ -72,7 +74,7 @@ const Signup = () => {
   };
 
   return (
-    <section className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-blue-50 min-h-screen w-ful overflow-x-hidden'>
+    <section className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-blue-50 min-h-screen w-full overflow-x-hidden'>
       <div className='flex flex-col m-5 p-3 justify-between min-h-screen w-full'>
         <div className='justify-between'>
           <h1 className='text-black font-bold text-2xl flex'><GraduationCap size={40} className='text-blue-700'/>Study <span className='text-blue-700 '>Hub</span></h1>

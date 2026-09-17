@@ -115,7 +115,7 @@ function Tabs({course, reviews, fetchReview}) {
         { activeTab === "instructor" && (
           <div className='m-2.5 p-2'>
             <div className='flex gap-6 items-center'>
-              <img src={course?.instructor.image} className='w-30 h-30 rounded-full object-cover'/>
+              <img src={course?.instructor.image} loading="lazy" className='w-30 h-30 rounded-full object-cover'/>
               <span >
               <h1 className='text-2xl font-bold '>{course?.instructor.name}</h1>
               <p className='text-xl font-semibold pb-4 text-gray-700'>{course?.instructor.qualification}</p>
@@ -237,7 +237,7 @@ function Tabs({course, reviews, fetchReview}) {
                   </div>
               <div className='flex justify-between items-center mt-4'>
                   <div className='flex gap-3 items-center'>
-                  <img src={review.user.dp} alt="" className='w-10 h-10 rounded-full object-cover '/>
+                  <img src={review.user.dp} loading="lazy" alt="" className='w-10 h-10 rounded-full object-cover '/>
                   <div>
                   <h1 className='text-sm font-bold'>{review.user.name}</h1>
                   <h1 className='text-xs  text-gray-600'>{review.user.email}</h1>
